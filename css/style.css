@@ -11,6 +11,7 @@ Primary use:    MultiPurpose Template
 
 @import "font-awesome.min.css";
 @import "et-line.css";
+
 /*------------------------------------------------------------------
 [Table of contents]
 
@@ -395,6 +396,17 @@ img:not([draggable]), embed, object, video {
    Typography
    ============================== */
 
+.nlbgreen-italic {
+    color: #8dc641;
+    font-style: italic;
+}
+
+/* Team Hover Styling */
+
+.teamhover-small {
+  font-size: 10px;
+}
+
 body {
     color: #252525;
     font-size: 14px;
@@ -405,11 +417,10 @@ body {
 
 a {
     color: #111;
-    text-decoration: underline;
 }
 
 a:hover {
-    color: #888;
+    color: #8dc641;
     text-decoration: underline;
 }
 
@@ -427,7 +438,7 @@ h1 {
     font-size: 32px;
 }
 
-h2 {
+h2{
     font-size: 28px;
 }
 
@@ -450,12 +461,12 @@ blockquote {
     background: none;
     font-style: normal;
     line-height: 1.7;
-    color: #777;
+    color: #424242;
 }
 
 blockquote p {
     margin-bottom: 1em;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 300;
     font-style: normal;
     line-height: 1.6;
@@ -499,6 +510,11 @@ hr.black {
     color: #8dc641;
 }
 
+.nlbgreenbold {
+  color: #8dc641;
+  font-weight: 700;
+}
+
 .centertext {
     text-align: center;
 }
@@ -512,6 +528,25 @@ hr.black {
     font-family: 'Asap', arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+}
+
+.font-alt-noncap {
+      font-family: 'Asap', arial, sans-serif;
+      letter-spacing: 0.2em;
+}
+
+.font-alt-white {
+    font-family: 'Asap', arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #fff;
+}
+
+.font-alt-green {
+    font-family: 'Asap', arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #8dc641;
 }
 
 .serif {
@@ -541,11 +576,34 @@ hr.black {
     line-height: 1.8;
 }
 
+.textsmall {
+  font-size: 14px;
+  font-weight: 300;
+  color: #5f5f5f;
+}
+
 .textwhite {
     font-size: 16px;
     font-weight: 300;
     color: rgba(255, 255, 255, .7);
     line-height: 1.8;
+}
+/*These next two classes are for the text on the front slider*/
+.headertextwhite{
+  color:#e8e8e8;
+}
+
+.capletters{
+    text-transform:uppercase; 
+}
+
+
+@media (max-width: 992px){
+  .headertextwhite{
+    font-size: 26px;
+  }
+  
+
 }
 
 .text h1, .text h2, .text h3, .text h4, .text h5, .text h6 {
@@ -758,6 +816,17 @@ hr.black {
     background: #8dc641;
 }
 
+.btn-mod.btn-border-k {
+    color: #3a3a3a;
+    border: 2px solid #3a3a3a;
+    background: #ffffff;
+}
+
+.btn-mod.btn-border-k:hover, .btn-mod.btn-border-k:focus {
+    color: #fff;
+    border-color: transparent;
+    background: #3a3a3a;
+}
 .btn-mod.btn-border-c {
     color: #e41919;
     border: 2px solid #e41919;
@@ -780,6 +849,16 @@ hr.black {
     color: #111;
     border-color: transparent;
     background: #fff;
+}
+
+.btn-dark {
+    background-color: rgba(34, 34, 34, .9);
+    color: white;
+}
+
+.btn-mod.btn-dark:hover, .btn-mod.btn-dark:focus {
+    color: rgba(34, 34, 34, .9);
+    background-color: #fff;
 }
 
 .btn-mod.btn-w {
@@ -883,7 +962,6 @@ hr.black {
 .btn-full {
     width: 100%;
 }
-
 
 /* ==============================
    Forms fields
@@ -1029,7 +1107,96 @@ hr.black {
  * Header common styles
  */
 
+
+section{
+    background-color:#fff;
+}
+
+.videorow{
+    padding-top:400px;
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    min-width: 100%;
+    min-height:100px;
+    height: auto;
+    width: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    /* background-size: cover; */
+}
+
+@media (max-width:656px){
+    video{
+        display:none;
+    }
+    .home-slider{
+        background-image:url("../images/sliders/Mike&TylerScreen.png");
+    }
+}
+
+.home-overlay{
+    background-color:transparent;
+}
+
+.home-slider{
+	width:100%;
+  background-color: rgba(0,0,0,0.6);
+	/* background-image:url("../images/sliders/Mike&Tyler.png"); */
+	background-position:center 5%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height:600px;
+	padding:170px 0px 0px 0px;
+	text-align:center;
+}
+
+
+.home-slider-row{
+  background-color: rgba(0,0,0,.6);
+  height:auto;
+  margin-bottom:40px;
+}
+
+.home-slider-button-row{
+  /* background-color: rgba(0,0,0,.6); */
+  height:auto;
+}
+
+
+@media (max-width:992px){
+	.home-slider{
+	height:450px;
+	background-size:auto 400px;
+	padding:100px 0px 0px 0px;
+
+}
+  .home-slider-row{
+      margin-bottom:25px;
+  }
+  .home-slider-button{
+	    margin-bottom: 10px;
+
+  }
+
+
+}
+
+.hidden-slider{
+	display:none;
+
+}
+
+
 .home-section {
+
     width: 100%;
     display: block;
     position: relative;
@@ -1530,7 +1697,7 @@ hr.black {
 .nav-logo-wrap .logo {
     display: table-cell;
     vertical-align: middle;
-    max-width: 118px;
+    max-width: 120px;
     height: 75px;
     -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
@@ -1548,7 +1715,7 @@ hr.black {
 }
 
 .logo, a.logo:hover {
-    font-family: Dosis, arial, sans-serif;
+    font-family: Asap, arial, sans-serif;
     font-size: 18px;
     font-weight: 400 !important;
     text-transform: uppercase;
@@ -1614,7 +1781,7 @@ hr.black {
 }
 
 .inner-nav ul li a {
-    color: #777;
+    color: #303030;
     letter-spacing: 2px;
     display: inline-block;
     -moz-box-sizing: border-box;
@@ -1628,10 +1795,12 @@ hr.black {
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
 }
 
+
+
 .inner-nav ul>li:first-child>a {}
 
 .inner-nav ul li a:hover, .inner-nav ul li a.active {
-    color: #000;
+    color: #8dc641;
     text-decoration: none;
 }
 
@@ -1979,6 +2148,10 @@ hr.black {
     font-family: 'Asap';
 }
 
+#main-nav-asap:hover {
+  color: #8dc641;
+}
+
 .main-nav.dark .inner-nav ul>li>a:hover, .main-nav.dark .inner-nav ul>li>a.active {
     color: #8dc641;
 }
@@ -2123,6 +2296,11 @@ hr.black {
     letter-spacing: 0;
 }
 
+a.order-nav-button:link {
+padding: 70px;
+color: black;
+
+}
 
 /* ==============================
    Fullscreen menu
@@ -2470,6 +2648,24 @@ hr.black {
     padding: 60px 0;
 }
 
+.page-section-footer {
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 0;
+}
+
 .small-section {
     padding: 70px 0;
 }
@@ -2520,11 +2716,19 @@ hr.black {
 }
 
 .bg-gray {
-    background-color: #8dc641;
+    background-color: #aaa;
+}
+
+.bg-nlbgreen {
+  background-color: #8dc641;
 }
 
 .bg-gray-lighter {
     background-color: #f8f8f8;
+}
+
+.bg-green-lighter {
+    background-color: #8dc641;
 }
 
 .bg-dark, .bg-dark-lighter, .bg-dark-alfa-30, .bg-dark-alfa-50, .bg-dark-alfa-70, .bg-dark-alfa-90, .bg-dark-alfa, .bg-color, .bg-color-lighter, .bg-color-alfa-30, .bg-color-alfa-50, .bg-color-alfa-70, .bg-color-alfa-90, .bg-color-alfa {
@@ -2759,6 +2963,15 @@ hr.black {
     line-height: 1.4;
 }
 
+.section-title-noncap {
+      margin-bottom: 15px;
+      font-size: 40px;
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: 0.5em;
+      line-height: 1.4;
+}
+
 .section-more {
     margin-top: 7px;
     color: #252525;
@@ -2844,6 +3057,11 @@ hr.black {
 
 .mod-breadcrumbs a:hover {
     text-decoration: none;
+    color: #8dc641;
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
 }
 
 .mod-breadcrumbs .fa {
@@ -3091,6 +3309,7 @@ hr.black {
 }
 
 .team-social-links {
+    display:none;
     font-size: 14px;
     cursor: pointer;
 }
@@ -3195,8 +3414,14 @@ hr.black {
    Alt features
    ============================== */
 
+.alt-span-small {
+  font-size: 11px;
+  font-weight: 300;
+}
+
 .alt-features-grid {
     margin-top: -70px;
+    display:none;
 }
 
 .alt-features-item {
@@ -3375,6 +3600,7 @@ hr.black {
 /* ==============================
    Portfolio
    ============================== */
+
 
 /* Additional CSS & Classes */
 
@@ -3825,7 +4051,7 @@ hr.black {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 22px;
-    font-weight: 300;
+    font-weight: 700;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.9);
@@ -3843,8 +4069,8 @@ hr.black {
 
 .banner-description {
     margin-bottom: 35px;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: 700;
     color: rgba(255, 255, 255, .7);
 }
 
@@ -3918,8 +4144,10 @@ hr.black {
 .post-grid {}
 
 .post-prev-img {
-    margin-bottom: 23px;
+    margin: 0px auto 23px auto;
     position: relative;
+    height: 303px;
+    text-align: center;
 }
 
 .post-prev-img a {
@@ -3935,7 +4163,7 @@ hr.black {
 }
 
 .post-prev-img img {
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .post-prev-title {
@@ -4059,8 +4287,13 @@ hr.black {
 }
 
 .contact-item a:hover {
-    color: #000;
+    color: #8dc641;
     text-decoration: none;
+        -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
 }
 
 .ci-icon {
@@ -4194,7 +4427,7 @@ hr.black {
     line-height: 27px;
     margin: 6px auto 25px;
     position: relative;
-    color: #111;
+    color: #8dc641;
     -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
@@ -4279,12 +4512,12 @@ hr.black {
 }
 
 .footer a:hover {
-    color: #111;
-    text-decoration: underline;
+    color: #8dc641;
 }
 
 .footer-copy {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    line-height: 20px;
     text-transform: uppercase;
     letter-spacing: 0.5em;
 }
@@ -4559,7 +4792,7 @@ a.blog-item-more:hover {
     color: #777;
 }
 
-.blog-page-title {
+.blog-title {
     margin-bottom: 30px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
@@ -6785,5 +7018,11 @@ section:hover .single-carousel .owl-next, section:hover .small-item-carousel .ow
 }
 
 .fa .fa-map-marker {
-  background-color: #8dc641 !important;
+    background-color: #8dc641 !important;
+    color: #8dc641;
+}
+
+/* Hidden Sections */
+.hidden-section{
+    display:none;
 }
