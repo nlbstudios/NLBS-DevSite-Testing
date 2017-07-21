@@ -594,7 +594,7 @@ hr.black {
 }
 
 .capletters{
-    text-transform:uppercase; 
+    text-transform:uppercase;
 }
 
 
@@ -602,7 +602,7 @@ hr.black {
   .headertextwhite{
     font-size: 26px;
   }
-  
+
 
 }
 
@@ -728,6 +728,9 @@ hr.black {
     color: rgba(0, 0, 0, .75);
 }
 
+.black-text{
+	color:#000 !important;
+}
 
 /* ==============================
    Buttons
@@ -967,6 +970,20 @@ hr.black {
    Forms fields
    ============================== */
 
+form textarea{
+  min-width: 400px;
+  margin: 5px 0 5px 0;
+  height: 55px;
+  background-color: #fff;
+}
+
+form select{
+  min-width: 400px;
+  margin: 5px 0 5px 0;
+  height: 55px;
+  background-color: #fff;
+}
+
 .form input[type="text"], .form input[type="email"], .form input[type="number"], .form input[type="url"], .form input[type="search"], .form input[type="tel"], .form input[type="password"], .form input[type="date"], .form input[type="color"], .form select {
     display: inline-block;
     height: 27px;
@@ -1112,11 +1129,16 @@ section{
     background-color:#fff;
 }
 
+
 .videorow{
     padding-top:400px;
 }
 
-video#bgvid { 
+.videorow2{
+    background-color:rgba(63,63,63,.75);
+}
+
+video#bgvid {
     position: fixed;
     top: 30%;
     left: 50%;
@@ -1133,12 +1155,50 @@ video#bgvid {
     /* background-size: cover; */
 }
 
+video#printvid {
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    min-width: 100%;
+    min-height:100px;
+    height: auto;
+    width: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    /* background-size: cover; */
+}
+
+
 @media (max-width:656px){
     video{
         display:none;
     }
     .home-slider{
-        background-image:url("../images/sliders/Mike&TylerScreen.png");
+      background-color: rgba(0,0,0,.3);
+      z-index: 1000;
+    }
+    .print-overlay{
+      background-color: rgba(0,0,0,.5);
+      z-index: 1000;
+    }
+    .home-overlay{
+      background-image: url("../images/sliders/Mike&Tyler.png");
+      background-attachment: local;
+      background-size: cover;
+      z-index:-1000;
+    }
+  .print-slider h3{
+    color:black;
+    font-size:16px;
+  }
+    .print-slider{
+        background-image:url("../images/mockup/graphicdesign/23-ready-made-scene.png");
+        background-position: center;
+        z-index: -1000;
     }
 }
 
@@ -1146,18 +1206,93 @@ video#bgvid {
     background-color:transparent;
 }
 
-.home-slider{
+.print-overlay{
+  background-color: rgba(0,0,0,.5);
+  z-index: 1000;
+}
+
+.print-slider{
 	width:100%;
-  background-color: rgba(0,0,0,0.6);
+  /*background-color: rgba(0,0,0,0.6);*/
 	/* background-image:url("../images/sliders/Mike&Tyler.png"); */
 	background-position:center 5%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	height:600px;
-	padding:170px 0px 0px 0px;
+	height:400px;
+	padding:20px 0px 0px 0px;
 	text-align:center;
 }
 
+.print-intro{
+  background-color: #fff;
+  padding: 10% 0 10% 0;
+}
+
+@media (max-width:992px){
+  .home-overlay{
+    color:black;
+
+    background-color: rgba(0,0,0,0.3);
+  }
+  video#bgvid{
+    top:270px;
+  }
+	.print-slider{
+	height:350px;
+	background-size:auto 450px;
+  background-attachment: local;
+	padding:40px 0px 0px 0px;
+
+  }
+  .home-slider-row{
+      margin-bottom:25px;
+  }
+  .home-slider-button{
+	    margin-bottom: 10px;
+
+  }
+  video#printvid {
+    top:0px;
+  }
+
+
+}
+
+@media (max-width: 1200px){
+  video#printvid {
+    top:380px;
+  }
+}
+
+.home-slider{
+	width:100%;
+  background-color: rgba(0,0,0,0.6);
+	 /*background-image:url("../images/sliders/Mike&Tyler.png"); */
+	background-position:center 5%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height:600px;
+	padding:200px 0px 0px 0px;
+	text-align:center;
+}
+
+@media (max-width:992px){
+	.home-slider{
+	height:400px;
+	background-size:auto 400px;
+	padding:100px 0px 0px 0px;
+
+  }
+  .home-slider-row{
+      margin-bottom:25px;
+  }
+  .home-slider-button{
+	    margin-bottom: 10px;
+
+  }
+
+
+}
 
 .home-slider-row{
   background-color: rgba(0,0,0,.6);
@@ -1170,24 +1305,11 @@ video#bgvid {
   height:auto;
 }
 
-
-@media (max-width:992px){
-	.home-slider{
-	height:450px;
-	background-size:auto 400px;
-	padding:100px 0px 0px 0px;
-
+.top-slider-overlay{
+	background-color: rgba(255,255,255,.5);
 }
-  .home-slider-row{
-      margin-bottom:25px;
-  }
-  .home-slider-button{
-	    margin-bottom: 10px;
-
-  }
 
 
-}
 
 .hidden-slider{
 	display:none;
@@ -1217,6 +1339,15 @@ video#bgvid {
     text-align: center;
 }
 
+/* Web Development Page */
+
+.website-portfolio{
+  padding-top: 10%;
+}
+
+.website-portfolio img hover{
+
+}
 
 /* Home content */
 
@@ -3708,6 +3839,7 @@ color: black;
 
 .work-img {
     position: relative;
+    max-height:250px;
     overflow: hidden;
 }
 
@@ -4069,7 +4201,7 @@ color: black;
 
 .banner-description {
     margin-bottom: 35px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     color: rgba(255, 255, 255, .7);
 }

@@ -78,7 +78,7 @@
                         <li>
                             <a href="http://portfolio.nlbstudios.com">Portfolio </a>
                         </li>
-                        <li>
+                        <li class="hidden-slider">
                             <a href="testimonials.html">Testimonials </a>
                         </li>
                         <li>
@@ -121,6 +121,62 @@
         <!-- End Head Section -->
 
 
+<div class="print-overlay">
+    <div class="container print-slider">
+      <div class="mt-140 mt-lg-80 mb-140 mb-lg-80">
+                            <div class="banner-content align-center">
+				    <h3 class="banner-heading font-alt">Our original bread and butter is putting ink on paper.</br> </br>There isn't a print product we don't have experience with.</h3>
+            <h3 class="banner-heading font-alt">Let us bring your designs to life.</h3>
+                                <div class="hidden-slider">
+                                    <a href="contactus.html" class="btn btn-mod btn-w mt-20 btn-medium btn-round">Lets talk</a>
+                                </div>
+                            </div>
+                        </div>
+       <div class="row videorow">
+           <video playsinline autoplay muted loop poster="images/map-marker.png" id="printvid">
+               <source src="video/vandee.mp4" type="video/mp4">
+           </video>
+       </div>
+    </div>
+</div>
+
+        <!-- Call Action Section -->
+        <!-- End Call Action Section -->
+
+	<!-- Print Request Form Section -->
+
+	<section class="print-form">
+	<div class="container-fluid">
+		<div class="row text-center">
+			<h1 class="blockquote"><br>Tell us what you're looking for</h1>
+		<form id="search" action="" name="search">
+			<select name="productType" id="productType">
+				<option>Product</option>
+			</select><br>
+			<select name="paperType" id="paperType">
+				<option>Select</option>
+			</select><br>
+      <select name="size" id="size">
+        <option>Select</option>
+      </select><br>
+      <select name="ink" id="ink">
+        <option>Select</option>
+      </select><br>
+      <select name="count" id="count">
+        <option>Select</option>
+      </select>
+      <br>
+      <textarea name="name" rows="8" cols="80" placeholder="Don't see the product in our catalog? Let us know what you are looking for."></textarea>
+      <div>
+          <a href="contactus.html" class="btn btn-mod btn-w mt-20 btn-medium btn-round">Get Quote</a>
+      </div>
+		</form>
+	</div>
+	</div>
+	</section>
+
+	<!-- End Print Request Form Section -->
+
         <!-- About Section -->
         <section class="page-section">
             <div class="container relative">
@@ -146,12 +202,13 @@
                 </div>
                 <!-- End About Section -->
 
+
                 <!-- Divider -->
                 <hr class="mb-70 mb-xs-30" />
                 <!-- End Divider -->
 
 
-                <div class="row multi-columns-row">
+                <div class="row multi-columns-row hidden-slider">
 
                     <!-- Post Item -->
                     <div class="col-sm-6 col-md-4 col-lg-4 mb-md-50 wow fadeIn" data-wow-delay="0.1s" data-wow-duration="2s">
@@ -201,28 +258,10 @@
         </section>
         <!-- End Features Section -->
 
-        <!-- Call Action Section -->
-        <section class="page-section pt-0 pb-0 banner-section bg-dark" data-background="images/PrintSolutionsPage/studiosinthesnow.png">
-            <div class="container relative">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="mt-140 mt-lg-80 mb-140 mb-lg-80">
-                            <div class="banner-content align-center">
-                                <h3 class="banner-heading font-alt">Call or email us today for a free quote.</h3>
-                                <div>
-                                    <a href="contactus.html" class="btn btn-mod btn-w mt-20 btn-medium btn-round">Lets talk</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Call Action Section -->
 
 
         <!-- Section -->
-        <section class="page-section" id="about">
+        <section class="page-section hidden-section" id="about">
             <div class="container relative">
 
                 <div class="section-text mb-60 mb-sm-40">
@@ -334,6 +373,7 @@
     <script type="text/javascript" src="js/all.js"></script>
     <script type="text/javascript" src="js/contact-form.js"></script>
     <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dropdowns.js"></script>
     <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
 
 </body>
